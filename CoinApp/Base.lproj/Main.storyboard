@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CoinApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <pickerView contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JCy-Fw-jfz">
+                                <rect key="frame" x="0.0" y="626" width="414" height="216"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="216" id="RdD-7u-he9"/>
+                                </constraints>
+                            </pickerView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="r4J-du-7qm">
+                                <rect key="frame" x="20" y="104" width="374" height="100"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hoA-3A-oPB">
+                                        <rect key="frame" x="0.0" y="10" width="374" height="80"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="JPY/円" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qiT-EG-049">
+                                                <rect key="frame" x="0.0" y="0.0" width="264.5" height="80"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2cs-wY-h2h">
+                                                <rect key="frame" x="264.5" y="0.0" width="50" height="80"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iXP-JE-RNO">
+                                                <rect key="frame" x="314.5" y="0.0" width="59.5" height="80"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="hoA-3A-oPB" secondAttribute="trailing" id="2vg-yG-gAu"/>
+                                    <constraint firstAttribute="height" constant="100" id="6ey-PT-5aV"/>
+                                    <constraint firstItem="hoA-3A-oPB" firstAttribute="top" secondItem="r4J-du-7qm" secondAttribute="top" constant="10" id="XMx-ZA-9yM"/>
+                                    <constraint firstItem="hoA-3A-oPB" firstAttribute="leading" secondItem="r4J-du-7qm" secondAttribute="leading" id="YrZ-x4-bdi"/>
+                                    <constraint firstAttribute="bottom" secondItem="hoA-3A-oPB" secondAttribute="bottom" constant="10" id="ewz-22-DNV"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="r4J-du-7qm" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="B4S-sv-879"/>
+                            <constraint firstItem="r4J-du-7qm" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="60" id="Mcv-mb-wXF"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="r4J-du-7qm" secondAttribute="trailing" constant="20" id="lLn-Sq-zBt"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="JCy-Fw-jfz" secondAttribute="bottom" constant="20" id="nYj-ax-aHS"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="coinLabel" destination="2cs-wY-h2h" id="y1L-RL-fpd"/>
+                        <outlet property="currencyLabel" destination="iXP-JE-RNO" id="mfD-Xm-CMx"/>
+                        <outlet property="currencyPicker" destination="JCy-Fw-jfz" id="qU9-rc-LUX"/>
+                        <outlet property="virtualCurrencyLabel" destination="qiT-EG-049" id="GV8-1H-G3u"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="277" y="119"/>
+        </scene>
+    </scenes>
+</document>
