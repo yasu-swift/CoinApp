@@ -10,7 +10,7 @@
 import Foundation
 
 protocol CoinManegerDelegate {
-    func didUpdatePrice(price: String, virtualCurrency: String)
+    func didUpdatePrice(price: String, currency: String, cA: String)
     func didFailWithError(error: Error)
 }
 
@@ -25,10 +25,10 @@ struct CoinManager {
 //    プロトコル にアクセスするため
     var delegate:CoinManegerDelegate?
     
-    func getCoinPrice(for currency:String){
+    func getCoinPrice(for currency:String, cA:String){
         print(currency,"これこれ")
         
-        let urlString = "\(baseURL)/\(currency)/JPY?apikey=\(apiKey)"
+        let urlString = "\(baseURL)/\(cA)/\(currency)?apikey=\(apiKey)"
         
         print(urlString)
         
@@ -47,7 +47,7 @@ struct CoinManager {
                 if let safeData = data{
                     if let bitcoinPrice = self.parseJSON(safeData){
                         let priceString = String(format: "%.2f", bitcoinPrice)
-                        self.delegate?.didUpdatePrice(price: priceString, virtualCurrency: currency)
+                        self.delegate?.didUpdatePrice(price: priceString, currency: currency,cA: cA)
                         
                     }
                 }
